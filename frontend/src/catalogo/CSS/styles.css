@@ -1,0 +1,81 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/* CABEÇALHO */
+.cabecalho {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(187, 9, 0, 0.678);
+    text-align: center;
+    padding: 30px;
+}
+
+.titulo {
+    color: cornsilk;
+    font-family: monospace, Arial;
+}
+
+/* CONTEÚDO */
+.conteudo {
+    min-height: 100vh;
+    padding: 20px 80px;
+    background-color: white;
+}
+
+.conteudo__cabecalho {
+    color: darkorange;
+    font: 800 20px Arial;
+    margin-bottom: 10px;
+}
+
+/* PRODUTO */
+.produto__container {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: space-between;
+    row-gap: 30px;
+    column-gap: 30px;
+    padding: 0 20px;
+}
+
+.produto {
+    display: grid;
+    background-color: #efefef;
+    grid-template-columns: auto auto;
+    width: 550px;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 18px;
+    text-align: center;
+}
+
+.produto__img {
+    display: inline-block;
+    width: 180px;
+}
+
+.produto__nome {
+    display: inline-block;
+    font: 500 19px Arial
+}
+
+.produto__preco {
+    text-align: center;
+    margin: 10px;
+    font: 700 20px Arial;
+}
+
+.produto__desc {
+    font: 700 10px Arial
+}
+
+/* RODAPÉ */
+.rodape {
+    background-color: rgba(0, 0, 0, 0.678);
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
