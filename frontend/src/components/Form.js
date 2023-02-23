@@ -108,6 +108,9 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
           desc: user.desc.value,
         })
         .then(({ data }) => toast.success(data))
+        .then(
+          handleUpload(user)
+        )
         .catch(({ data }) => toast.error(data));
     }
 
@@ -127,12 +130,12 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
     setFile(e.target.files[0]);
   };
 
-  const handleUpload = (e) => {
+  const handleUpload = (date) => {
     let image = file;
 
     let formdata = new FormData();
 
-    formdata.append("name", "newUploads.jpg");
+    formdata.append("name", `${date.nome.value}`);
     formdata.append("image", image);
 
     axios({
@@ -189,7 +192,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
         <Input name="price" />
       </InputArea>
       <StyledLink to={"./catalogo"}>Catálogo</StyledLink>
-      <Button type="submit" onClick={(e) => handleUpload(e)}>SALVAR</Button>
+      <Button type="submit">SALVAR</Button>
     </FormContainer>
   );
 };

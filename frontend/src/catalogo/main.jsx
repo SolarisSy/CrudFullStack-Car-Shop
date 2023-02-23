@@ -39,7 +39,7 @@ const Header = (props) => {
 const Produto = (props) => {
   return (
     <div className="produto">
-      <img className="produto__img" src={props.produto.img} alt="produto" />
+      <img className="produto__img" src={'http://localhost:8800/' + props.produto.src} alt="produto" />
       <p className="produto__nome">{props.produto.nome}</p>
       <p className="produto__preco">R$ {props.produto.price}</p>
       <p className="produto__desc">{props.produto.desc}</p>
@@ -47,7 +47,7 @@ const Produto = (props) => {
   );
 };
 
-const Content = (props) => {
+const Content = () => {
   const [users, setUsers] = useState([]);
 
   const getUsers = async () => {
@@ -80,13 +80,32 @@ const Content = (props) => {
     loadImage();
   }, []);
 
+  let UserAndImageList = {
+    usuarios: users,
+    images: image,
+  };
+
+  if (!UserAndImageList.usuarios || !UserAndImageList.images) {
+    return null;
+  }
+
+  const mergedObjects = UserAndImageList.usuarios.map((user, i) => {
+    const matchingImage = UserAndImageList.images.find(
+      (image) => image.name === user.nome
+    );
+
+    const src = matchingImage.src.replace('public\\', '')
+
+    return matchingImage ? { ...user, src } : null;
+  });
+
   return (
     <main className="conteudo">
       <h2 className="conteudo__cabecalho">Nosso Veículos</h2>
       <section className="produto__container">
-        {users.map((produto, index) => (
-          <Produto key={index} produto={produto} />
-        ))}
+        {mergedObjects.map((produto, index) => (
+            <Produto key={index} produto={produto} />
+          ))}
       </section>
     </main>
   );
