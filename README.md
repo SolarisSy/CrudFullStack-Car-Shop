@@ -36,7 +36,7 @@ api/
 
 notice, you need client and server runs concurrently in different terminal session, in order to make them talk to each other
 
-## Client-side usage(PORT: 3000)
+## Api-side usage(PORT: 8800)
 ```terminal
 $ cd frontend          // go to client frontend
 $ yarn # or npm i    // npm install packages
@@ -50,7 +50,7 @@ $ npm run build // this will compile the react code using webpack and generate a
 $ npm run start // this will run the files in docs, this behavior is exactly the same how gh-pages will run your static site
 ```
 
-## Server-side usage(PORT: 8800)
+## Front-side usage(PORT: 3000)
 ### Start
 
 ```terminal
