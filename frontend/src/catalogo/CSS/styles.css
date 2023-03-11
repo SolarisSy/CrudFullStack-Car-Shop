@@ -38,38 +38,48 @@
     justify-content: space-between;
     row-gap: 30px;
     column-gap: 30px;
-    padding: 0 20px;
+    padding: 0px;
 }
 
 .produto {
     display: grid;
     background-color: #efefef;
     grid-template-columns: auto auto;
-    width: 550px;
+    width: 400px;
     border-radius: 10px;
-    padding: 85px;
+    padding: 28px 90px 80px 113px;
+    height: 178px;;
     font-size: 18px;
     text-align: center;
 }
 
-.produto__img {
-    display: inline-block;
-    width: 180px;
+.produto__nome {
+    display: flex;
+    color: rgb(46, 46, 55);
+    font: 500 19px Arial;
+    margin: 0px 0px 0px 11px;
 }
 
-.produto__nome {
-    display: inline-block;
-    font: 500 19px Arial
+.produto__img {
+    display: flex;
+    border-radius: 5px;
+    width: 350px;
+    margin: 0px 0px 0px -75px;
 }
 
 .produto__preco {
     text-align: center;
-    margin: 10px;
     font: 700 20px Arial;
+    padding: 0px 62px 153px 0px;
 }
 
 .produto__desc {
-    font: 700 10px Arial
+    font: 700 11px Arial;
+    font-family: poppins;
+    color: rgb(139, 140, 153);
+    text-align: left;
+    margin: -200px -86px 0px 0px;
+    padding: 0px 8px 0px 8px;
 }
 
 /* RODAPÉ */

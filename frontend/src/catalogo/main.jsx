@@ -95,7 +95,6 @@ const Content = () => {
     );
 
     const src = matchingImage.src.replace('public\\', '')
-
     return matchingImage ? { ...user, src } : null;
   });
 
