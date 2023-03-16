@@ -40,9 +40,11 @@ const Produto = (props) => {
   return (
     <div className="produto">
       <img className="produto__img" src={'http://localhost:8800/' + props.produto.src} alt="produto" />
-      <p className="produto__nome">{props.produto.nome}</p>
-      <p className="produto__preco">R$ {props.produto.price}</p>
+      <div className="produtoMerged_nomeDesc">
+      <h1 className="produto__nome">{props.produto.nome}</h1>
       <p className="produto__desc">{props.produto.desc}</p>
+      </div>
+        <p className="produto__preco">R$ {props.produto.price}</p>
     </div>
   );
 };
@@ -100,7 +102,7 @@ const Content = () => {
 
   return (
     <main className="conteudo">
-      <h2 className="conteudo__cabecalho">Nosso Veículos</h2>
+      <h2 className="conteudo__cabecalho">Nossos Veículos</h2>
       <section className="produto__container">
         {mergedObjects.map((produto, index) => (
             <Produto key={index} produto={produto} />

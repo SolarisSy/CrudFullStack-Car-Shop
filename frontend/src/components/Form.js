@@ -185,7 +185,7 @@ const Form = ({ getUsers, onEdit, setOnEdit }) => {
       </InputArea>
       <InputArea>
         <Label>Descrição</Label>
-        <Input name="desc" />
+        <Input name="desc" maxLength={420} />
       </InputArea>
       <InputArea>
         <Label>Preço</Label>
