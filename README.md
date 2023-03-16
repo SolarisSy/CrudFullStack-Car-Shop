@@ -69,3 +69,4 @@ react: ^16.2.0 | dotenv: ^2.0.0
 react-dom: ^18.2.0 | express: ^4.14.0
 react-router-dom: ^6.7.2 | mongoose: ^4.7.4
 redux: ^3.7.2 | morgan: ^1.7.0
+
