@@ -42,9 +42,9 @@ notice, you need client and server runs concurrently in different terminal sessi
 $ cd api              // go to api
 $ npm i                // npm install packages
 $ npm run dev         // run Api
+
 // deployment for client app
 $ npm run build // this will compile the react code using webpack and generate a folder called docs in the root level
-
 $ npm run start // this will run the files in docs, this behavior is exactly the same how gh-pages will run your static site
 ```
 
