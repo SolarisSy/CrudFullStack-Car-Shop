@@ -38,12 +38,10 @@ notice, you need client and server runs concurrently in different terminal sessi
 
 ## Api-side usage(PORT: 8800)
 ```terminal
-$ cd frontend          // go to client frontend
-$ yarn # or npm i    // npm install packages
-and 
+
 $ cd api              // go to api
 $ npm i                // npm install packages
-
+$ npm run dev         // run Api
 // deployment for client app
 $ npm run build // this will compile the react code using webpack and generate a folder called docs in the root level
 
@@ -54,9 +52,9 @@ $ npm run start // this will run the files in docs, this behavior is exactly the
 ### Start
 
 ```terminal
-$ cd server   // go to server folder
-$ npm i       // npm install packages
-$ npm run dev // run it locally
+$ cd frontend   // go to server folder
+$ npm i          // npm install packages
+$ npm run dev   // run it locally
 $ npm run build // this will build the server code to es5 js codes and generate a dist file
 ```
 # Dependencies(tech-stacks)
